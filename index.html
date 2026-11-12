@@ -25,10 +25,10 @@
 <body>
 <main>
   <h1>Sentence Studio Privacy Policy</h1>
-  <p class="meta">Applies to the Sentence Studio — AI Rephrase Chrome extension and its optional desktop helper apps.<br>Effective date: 12 November 2026</p>
+  <p class="meta">Applies to the Sentence Studio — AI Writing Assistant Chrome extension and its optional Windows connector.<br>Effective date: 12 November 2026</p>
 
   <div class="summary">
-    <strong>In short:</strong> Sentence Studio sends only the text you choose to rewrite to the AI provider you choose: OpenAI for ChatGPT, Google for Gemini, or Anthropic through Claude Code on your computer. The developer runs no server and receives none of your text, account details or sign-in credentials. There is no analytics, advertising, tracking or rewrite history. Your data is never sold.
+    <strong>In short:</strong> Sentence Studio sends only the text you choose, and anything you type for a request, to the AI provider you choose: OpenAI for ChatGPT or Google for Gemini. The developer runs no server and receives none of your text, account details or sign-in credentials. There is no analytics, advertising, tracking or rewrite history. Your data is never sold.
   </div>
 
   <h2>1. Who we are</h2>
@@ -37,22 +37,21 @@
   <h2>2. What data the extension handles</h2>
   <div class="scroll"><table>
     <tr><th>Data</th><th>When and why</th><th>Where it goes</th></tr>
-    <tr><td>Text you select or paste</td><td>Only when you click <em>Rephrase with AI</em>, use the right-click menu, press the desktop shortcut or use the popup text box. Used to create three rewritten versions.</td><td>Sent to your chosen AI provider for that one request. Not stored by the extension.</td></tr>
+    <tr><td>Text you select, paste or type</td><td>Only when you choose an action (such as Rephrase, Explain, Summarize, Draft a reply or Translate) from the button beside your selection, the right-click menu, the Windows connector shortcut or the popup text box. For <em>Draft a reply</em>, the notes you type about what you want to say are sent as well. Used only to produce the result you asked for.</td><td>Sent to your chosen AI provider for that one request. Not stored by the extension.</td></tr>
     <tr><td>ChatGPT account information (name, email, account ID)</td><td>When you sign in with ChatGPT, to show which account is connected and to verify the sign-in.</td><td>Chrome session storage on your device (cleared when Chrome closes). Your email, account ID and the app registration ID from your last login are kept in Chrome local storage to reconnect the same app registration.</td></tr>
-    <tr><td>Gemini API key</td><td>When you add your own Google AI Studio key, to make rewrite requests with Gemini.</td><td>Kept in memory inside the extension until Chrome closes. If you tick <em>Remember on this device</em>, it is stored in Chrome local storage on your device (not encrypted). Never shown to web pages or the desktop helper, never sent to the developer. Sent only to Google.</td></tr>
-    <tr><td>ChatGPT sign-in tokens</td><td>To make rewrite requests with your ChatGPT plan.</td><td>Kept only in memory inside the extension. Never written to disk, never shown to web pages, never sent to the desktop helper or to the developer. Sent only to OpenAI.</td></tr>
-    <tr><td>Settings</td><td>Your chosen AI provider, model choices, whether to remember your Gemini key, and whether the desktop helper is enabled.</td><td>Chrome local storage on your device.</td></tr>
-    <tr><td>Web page content</td><td>The extension reads your current selection to show the <em>Rephrase with AI</em> button and to replace text when you click <em>Replace</em>.</td><td>Stays on your device. Pages are not scanned or collected, and only the text you choose to rewrite is sent anywhere.</td></tr>
+    <tr><td>Gemini API key</td><td>When you add your own Google AI Studio key, to make rewrite requests with Gemini.</td><td>Kept in memory inside the extension until Chrome closes. If you tick <em>Remember on this device</em>, it is stored in Chrome local storage on your device (not encrypted). Never shown to web pages or the Windows connector, never sent to the developer. Sent only to Google.</td></tr>
+    <tr><td>ChatGPT sign-in tokens</td><td>To make rewrite requests with your ChatGPT plan.</td><td>Kept only in memory inside the extension. Never written to disk, never shown to web pages, never sent to the Windows connector or to the developer. Sent only to OpenAI.</td></tr>
+    <tr><td>Settings</td><td>Your chosen AI provider, model choices, last used action and its options, output languages, whether to remember your Gemini key, and whether the Windows connector is enabled.</td><td>Chrome local storage on your device.</td></tr>
+    <tr><td>Web page content</td><td>The extension reads your current selection to show the Sentence Studio button beside it and to replace text when you click <em>Replace</em> (or <em>Undo</em>).</td><td>Stays on your device. Pages are not scanned or collected, and only the text you choose is sent anywhere.</td></tr>
   </table></div>
   <p>The extension does not collect browsing history, location, financial or health information, keystrokes, or the content of pages you do not select text on.</p>
 
   <h2>3. AI providers</h2>
   <p><strong>ChatGPT (OpenAI).</strong> When you use ChatGPT, the selected text and the rewrite instructions are sent directly from your browser to OpenAI (<code>api.openai.com</code>) using your own ChatGPT account. Sign-in happens through <code>auth.openai.com</code>. Requests are made with OpenAI's <code>store: false</code> option. OpenAI's handling of this data is governed by <a href="https://openai.com/policies/privacy-policy/">OpenAI's Privacy Policy</a>.</p>
   <p><strong>Gemini (Google).</strong> When you choose Gemini, the selected text and the rewrite instructions are sent directly from your browser to Google's Gemini API (<code>generativelanguage.googleapis.com</code>) using the API key you created in Google AI Studio. Your key is sent only to Google, in a request header. Google's handling of this data is governed by the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. On Google's free (unpaid) tier, Google may use submitted text and responses to improve its products. For users in the European Economic Area, Switzerland and the United Kingdom, and for keys with billing enabled, Google states it does not use them to improve its products. Avoid rewriting confidential text with a free key.</p>
-  <p><strong>Claude (Anthropic).</strong> When you choose Claude, the selected text is passed to the Sentence Studio desktop app on your own computer, which runs the official Claude Code app that you installed and signed into yourself. Claude Code sends the text to Anthropic under your own Claude account. Sentence Studio never sees your Claude credentials. Anthropic's handling of this data is governed by <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy Policy</a> and your Claude plan's terms.</p>
 
-  <h2>4. Optional desktop helper apps</h2>
-  <p>The optional Sentence Studio apps for Windows and macOS let you rephrase text in other programs, such as Microsoft Teams. They talk to the extension only through Chrome's private native-messaging connection on your computer, and no network listener is opened. They read the selected text only when you press the shortcut or use their text box. They may briefly use the clipboard to copy or paste your selection, and they try to restore your previous clipboard contents afterwards. Selected text and results are kept in memory and cleared when the window closes. Nothing is logged or saved to disk.</p>
+  <h2>4. Optional Windows connector</h2>
+  <p>The optional Sentence Studio Windows connector lets you rephrase text in other Windows programs, such as Microsoft Teams. They talk to the extension only through Chrome's private native-messaging connection on your computer, and no network listener is opened. They read the selected text only when you press the shortcut or use their text box. They may briefly use the clipboard to copy or paste your selection, and they try to restore your previous clipboard contents afterwards. Selected text and results are kept in memory and cleared when the window closes. Nothing is logged or saved to disk.</p>
 
   <h2>5. What we do not do</h2>
   <ul>
@@ -67,13 +66,13 @@
   <p>The <em>Donate with PayPal</em> button opens PayPal's own website in a new tab. No account data or text is passed to PayPal. Any donation is handled under <a href="https://www.paypal.com/myaccount/privacy/privacyhub">PayPal's privacy policy</a>.</p>
 
   <h2>7. Retention and deletion</h2>
-  <p>Selected text is held only while a rewrite runs. ChatGPT tokens disappear when you sign out, restart Chrome or reload the extension. To delete everything the extension stores, remove it from Chrome. Signing out also asks OpenAI to revoke the session. Removing your Gemini key in the popup deletes it from the extension; you can also delete the key itself in Google AI Studio. You can disconnect the app's ChatGPT access in ChatGPT under Settings → Security. Data already sent to OpenAI or Anthropic is handled under their policies.</p>
+  <p>Selected text is held only while a rewrite runs. ChatGPT tokens disappear when you sign out, restart Chrome or reload the extension. To delete everything the extension stores, remove it from Chrome. Signing out also asks OpenAI to revoke the session. Removing your Gemini key in the popup deletes it from the extension; you can also delete the key itself in Google AI Studio. You can disconnect the app's ChatGPT access in ChatGPT under Settings → Security. Data already sent to OpenAI or Google is handled under their policies.</p>
 
   <h2>8. Security</h2>
-  <p>Credentials are kept in memory in an isolated extension worker and never exposed to web pages. Network requests are limited to the specific OpenAI and Google Gemini addresses the extension needs. The desktop helpers accept connections only from this extension.</p>
+  <p>Credentials are kept in memory in an isolated extension worker and never exposed to web pages. Network requests are limited to the specific OpenAI and Google Gemini addresses the extension needs. The Windows connector accepts connections only from this extension.</p>
 
   <h2>9. Children</h2>
-  <p>Sentence Studio is not directed to children under 13 and does not knowingly collect their data. Use of ChatGPT, Gemini and Claude is subject to the age requirements of OpenAI, Google and Anthropic.</p>
+  <p>Sentence Studio is not directed to children under 13 and does not knowingly collect their data. Use of ChatGPT and Gemini is subject to the age requirements of OpenAI and Google.</p>
 
   <h2>10. Changes and contact</h2>
   <p>If this policy changes, the updated version will be posted on this page with a new effective date. Questions or requests: <a href="mailto:sentence.studio.ai@gmail.com">sentence.studio.ai@gmail.com</a>.</p>
